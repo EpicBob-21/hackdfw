@@ -1,9 +1,26 @@
-<title> Small Ugly Webpage </title>
+<head>
+    <title> Small Ugly Webpage </title>
+    <script>
+        function add(num1, num2){
+            return num1+num2;
+        }
+    </script>
+</head>
 
 <style>
+
+    body{
+        background-color: rgb(255, 230, 247);
+        font: 500 100%/1.5 system-ui;
+    }
+
     #intro{
         text-align: center;
-        margin:10px;
+        margin:5px;
+    }
+
+    #add{
+        text-align: center;
     }
 
     #Body {
@@ -14,11 +31,10 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    font: 500 100%/1.5 system-ui;
     }
     img {
         max-width: 570px;
-        border:15px ridge lavender;
+        border:15px ridge rgb(147, 125, 194);
         height: auto;
     }
     .r{
@@ -46,9 +62,17 @@
         </h2>
     </div>
 
-    <h3>
-        Here's a simple adding program
-    </h3>
+    <div id="add">
+        <script>
+            var sum;
+            for(let i=1;i<1000;i++){
+                sum = add(sum, i);
+            }
+        </script>
+        <h3>
+            Here's a simple adding program
+        </h3>
+    </div>
     
     <div id="Body">
         
