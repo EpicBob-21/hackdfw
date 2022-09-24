@@ -58,7 +58,7 @@
             width: 75px;
         }
         #try{
-            align-items: center;
+            text-align: center;
         }
 
         #button{
@@ -144,13 +144,16 @@
             
         </div>
 
-        <h2 id="try">
-            Try it Yourself!
-        </h2>
+        <div id="try">
+            <h2>
+                Try it Yourself!
+            </h2>
+            <form>
+                <label for="code">Your JavaScript Code:</label><br>
+                <input type="text" id="code" name="code"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
 
-        <button onclick="askInput()" id="button">
-            Click to enter code
-        </button>
-        
     </body>
 </html>
