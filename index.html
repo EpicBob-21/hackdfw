@@ -6,8 +6,8 @@
             function add(num1, num2){
                 return num1+num2;
             }
-            function takeInput(code){
-                var input = code;
+            function takeInput(){
+                var input = document.getElementsByName("code");
             }
         </script>
     </head>
@@ -148,7 +148,7 @@
             <h2>
                 Try it Yourself!
             </h2>
-            <form action ="takeInput(code)">
+            <form action ="takeInput()">
                 <textarea name="code"></textarea>
                 <input type="submit" value="Submit" >
             </form>
