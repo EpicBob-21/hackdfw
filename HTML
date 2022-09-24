@@ -6,33 +6,19 @@
         margin:10px;
     }
 
-    #Body{
-        margin:10px;
+    #Body {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
     }
-
-    #pic1{
-        width:800px;
-        border:15px ridge lavender;
-        display: block;
-        margin:10px;
-        float:left;
-    }
-    #pic2{
-        width:800px;
-        border:15px ridge lavender;
-        display: block;
-        margin:10px;
-        float:right;
-    }
-
-    #p1{
-        text-align:left;
-    }
-    #sub2{
-        float:left;
-    }
-    #p2{
-        float:left;
+    img {
+        max-width: 100%;
+        height: auto;
     }
 </style>
 
@@ -53,25 +39,30 @@
     </div>
     
     <div id="Body">
-        <h3 class = "sub">
-            Look at this really cool picture!
-        </h3>
         
-        <img src="https://www.romanbaths.co.uk/sites/roman_baths/files/dsc8009-hdr.jpg" alt="Roman Bath" id="pic1">
-        <p id = "p1">
-            blah blah blah blah
-        </p>
-
-        <h3 id = "sub2">
-            Look at this really cool picture!
-        </h3>
-        
+        <img src="https://www.romanbaths.co.uk/sites/roman_baths/files/dsc8009-hdr.jpg" alt="Roman Bath" class="pic">
         <div>
-            <img src="https://www.romanbaths.co.uk/sites/roman_baths/files/dsc8009-hdr.jpg" alt="Roman Bath" id="pic2">
-            <p id = "p2">
-                blah blah blah blah
+            <h3 class = "sub">
+                Look at this really cool picture!
+            </h3>
+            <p id = "p1">
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
             </p>
         </div>
+       
+        
+        <div>
+            <h3 class = "sub2">
+                Look at this really cool picture!
+            </h3>
+            <p id = "p2">
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            </p>
+        </div> 
+        <img src="https://www.romanbaths.co.uk/sites/roman_baths/files/dsc8009-hdr.jpg" alt="Roman Bath" class="pic2">
+
         
     </div>
     
