@@ -6,6 +6,9 @@
             function add(num1, num2){
                 return num1+num2;
             }
+            function addInput(){
+                var code = prompt("Copy some JavaScript code here");
+            }
         </script>
     </head>
 
@@ -54,6 +57,18 @@
             align-self: center;
             width: 75px;
         }
+        #try{
+            align-items: center;
+        }
+
+        #button{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
     </style>
 
     <body>
@@ -128,6 +143,14 @@
             </div>
             
         </div>
+
+        <h2 id="try">
+            Try it Yourself!
+        </h2>
+
+        <button onclick="askInput()" id="button">
+            Click to enter code
+        </button>
         
     </body>
 </html>
