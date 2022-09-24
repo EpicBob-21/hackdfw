@@ -1,130 +1,133 @@
-<head>
-    <title> Small Ugly Webpage </title>
-    <script>
-        function add(num1, num2){
-            return num1+num2;
-        }
-    </script>
-</head>
-
-<style>
-
-    body{
-        background-color: rgb(255, 230, 247);
-        font: 500 100%/1.5 system-ui;
-    }
-
-    #intro{
-        text-align: center;
-        margin:5px;
-    }
-
-    #add{
-        text-align: center;
-    }
-
-    #Body {
-    display: grid;
-    padding: 2rem;
-    grid-template-columns: 400px 1fr;
-    gap: 1rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    }
-    img {
-        max-width: 90%;
-        border:15px ridge rgb(147, 125, 194);
-        height: auto;
-        align-items: center;
-    }
-    .r{
-        text-align:left;
-    }
-    .l{
-        text-align:right;
-    }
-
-    #p2{
-        text-align:right;
-    }
-    #pic3{
-        align-self: center;
-        width: 75px;
-    }
-</style>
-
-<body>
-    <div id="intro">
-        <h1>
-            Hello!
-        </h1>
-        <h2>
-            I'm just a small, ugly webpage.
-        </h2>
-        <h2>
-            but I'm working really hard behind the scenes!
-        </h2>
-        <h2>
-            Let me show you
-        </h2>
-    </div>
-
-    <div id="add">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Small Ugly Webpage </title>
         <script>
-            var sum=0;
-            for(let i=1;i<10000;i++){
-                sum = add(sum, i);
+            function add(num1, num2){
+                return num1+num2;
             }
-            document.write("the sum of the first 10000 numbers is: "+sum);
         </script>
-        <h3>
-            Here's a simple adding program
-        </h3>
-    </div>
-    
-    <div id="Body">
+    </head>
+
+    <style>
+
+        body{
+            background-color: rgb(255, 230, 247);
+            font: 500 100%/1.5 system-ui;
+        }
+
+        #intro{
+            text-align: center;
+            margin:5px;
+        }
+
+        #add{
+            text-align: center;
+        }
+
+        #Body {
+        display: grid;
+        padding: 2rem;
+        grid-template-columns: 400px 1fr;
+        gap: 1rem;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        }
+        img {
+            max-width: 90%;
+            border:15px ridge rgb(147, 125, 194);
+            height: auto;
+            align-items: center;
+        }
+        .r{
+            text-align:left;
+        }
+        .l{
+            text-align:right;
+        }
+
+        #p2{
+            text-align:right;
+        }
+        #pic3{
+            align-self: center;
+            width: 75px;
+        }
+    </style>
+
+    <body>
+        <div id="intro">
+            <h1>
+                Hello!
+            </h1>
+            <h2>
+                I'm just a small, ugly webpage.
+            </h2>
+            <h2>
+                but I'm working really hard behind the scenes!
+            </h2>
+            <h2>
+                Let me show you
+            </h2>
+        </div>
+
+        <div id="add">
+            <script>
+                var sum=0;
+                for(let i=1;i<10000;i++){
+                    sum = add(sum, i);
+                }
+                document.write("the sum of the first 10000 numbers is: "+sum);
+            </script>
+            <h3>
+                Here's a simple adding program
+            </h3>
+        </div>
         
-        <img src="javascript adding demo.png" alt="Rjavascript addition" class="pic">
-        <div class="r">
-            <h3>
-                Look at this really cool picture!
-            </h3>
-            <p>
-                This is a javascript function we used. As most people know, JavaScript is a platform independent, web based language. Most browsers use their own engines to interpret the JS. I will explain how the JS is understood by the V8 engine, the optimizations the engine uses to produce faster code, and 
-                how to change your code to more effecively make use of these optimizations. For this example, We are going to take a simple adding function and trace it though bytecode and optimizations.
-            </p>
-        </div>
+        <div id="Body">
+            
+            <img src="javascript adding demo.png" alt="Rjavascript addition" class="pic">
+            <div class="r">
+                <h3>
+                    Look at this really cool picture!
+                </h3>
+                <p>
+                    This is a javascript function we used. As most people know, JavaScript is a platform independent, web based language. Most browsers use their own engines to interpret the JS. I will explain how the JS is understood by the V8 engine, the optimizations the engine uses to produce faster code, and 
+                    how to change your code to more effecively make use of these optimizations. For this example, We are going to take a simple adding function and trace it though bytecode and optimizations.
+                </p>
+            </div>
 
-        <div class="r">
-            <h3>
-                Look at this Bytecode!
-            </h3>
-            <p>
-                This is the Bytecode that javascript is using for the adding program
-                The V8 interpreter, Ignition's output is shown here. 
-                It is V8 bytecode intended to be run on the V8 runtime environment.
-                The LDAR command loads the parameter into a [0] register which then allows an addition instruction to go through.
-                This bytecode can also be optimized further by going straight to machine code - this is mainly used for "hot" functions that are repeated many times- 
-                but it takes up significantly more memory because it is much longer.
-            </p>
-        </div>
-        <img src="bytecode.png" alt="bytecode" class="pic3">
+            <div class="r">
+                <h3>
+                    Look at this Bytecode!
+                </h3>
+                <p>
+                    This is the Bytecode that javascript is using for the adding program
+                    The V8 interpreter, Ignition's output is shown here. 
+                    It is V8 bytecode intended to be run on the V8 runtime environment.
+                    The LDAR command loads the parameter into a [0] register which then allows an addition instruction to go through.
+                    This bytecode can also be optimized further by going straight to machine code - this is mainly used for "hot" functions that are repeated many times- 
+                    but it takes up significantly more memory because it is much longer.
+                </p>
+            </div>
+            <img src="bytecode.png" alt="bytecode" class="pic3">
 
 
-        <div id = "p2">
-            <h3>
-                Look at all this machine code!
-            </h3>
-            <p>
-                This is the machine code generated by TurboFan for a repeatedly evaluated function. Its quite complicated only because it is interwoven with the machine code for evaluation. This machine code - while memory intensive - is very fast, however any unexpected input to the optimized function could break the optimized code forcing V8 to revert back to the Ignition interpreter. This optimized code only acutally optimizes within large loops or other reasons to call the function many times. 
-            </p>
-        </div> 
-        <div>
-            <img src="2.png" alt="machine code" class="pic3">
-            <!--<img src="PIC1.png" alt="Roman Bath" class="pic3">-->
+            <div id = "p2">
+                <h3>
+                    Look at all this machine code!
+                </h3>
+                <p>
+                    This is the machine code generated by TurboFan for a repeatedly evaluated function. Its quite complicated only because it is interwoven with the machine code for evaluation. This machine code - while memory intensive - is very fast, however any unexpected input to the optimized function could break the optimized code forcing V8 to revert back to the Ignition interpreter. This optimized code only acutally optimizes within large loops or other reasons to call the function many times. 
+                </p>
+            </div> 
+            <div>
+                <img src="2.png" alt="machine code" class="pic3">
+                <!--<img src="PIC1.png" alt="Roman Bath" class="pic3">-->
+            </div>
+            
         </div>
         
-    </div>
-    
-</body>
+    </body>
+</html>
