@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
     // Insert Login Code Here
     var myText = req.body.code;
     //console.log(myText)
-    exec('echo \'function nothing(){' + myText + '}nothing();\' > gogo.js', (error, stdout, stderr) => {
+    exec('echo \'function nothing(){' + myText + '}nothing();\' >| gogo.js', (error, stdout, stderr) => {
         if (error) {
           console.error(`error: ${error.message}`);
           return;
@@ -46,6 +46,7 @@ app.post('/', (req, res) => {
         }
         res.send(myText + `\n${stdout}`);
   });
+  
 })
 
 app.listen(port, () => {
