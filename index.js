@@ -44,21 +44,8 @@ app.post('/', (req, res) => {
           console.error(`stderr: ${stderr}`);
           return;
         }
-    
         res.send(myText + `\n${stdout}`);
   });
-  exec('rm gogo.js', (error, stdout, stderr) => {
-    if (error) {
-      console.error(`error: ${error.message}`);
-      return;
-    }
-  
-    if (stderr) {
-      console.error(`stderr: ${stderr}`);
-      return;
-    }
-    //res.send(myText + `\n${stdout}`);
-});
 })
 
 app.listen(port, () => {
