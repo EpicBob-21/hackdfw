@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
     // Insert Login Code Here
     var myText = req.body.code;
     //console.log(myText)
-    exec('pwd', (error, stdout, stderr) => {
+    exec('echo \'function nothing(){' + myText + '}nothing();\' > gogo.js', (error, stdout, stderr) => {
         if (error) {
           console.error(`error: ${error.message}`);
           return;
@@ -32,8 +32,33 @@ app.post('/', (req, res) => {
           console.error(`stderr: ${stderr}`);
           return;
         }
+        //res.send(myText + `\n${stdout}`);
+  });
+    exec('node --print-bytecode --print-bytecode-filter=nothing gogo.js', (error, stdout, stderr) => {
+        if (error) {
+          console.error(`error: ${error.message}`);
+          return;
+        }
+      
+        if (stderr) {
+          console.error(`stderr: ${stderr}`);
+          return;
+        }
+    
         res.send(myText + `\n${stdout}`);
   });
+  exec('rm gogo.js', (error, stdout, stderr) => {
+    if (error) {
+      console.error(`error: ${error.message}`);
+      return;
+    }
+  
+    if (stderr) {
+      console.error(`stderr: ${stderr}`);
+      return;
+    }
+    //res.send(myText + `\n${stdout}`);
+});
 })
 
 app.listen(port, () => {
