@@ -9,29 +9,30 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.get('/', (req, res) => {
-exec('pwd', (error, stdout, stderr) => {
-  if (error) {
-    console.error(`error: ${error.message}`);
-    return;
-  }
 
-  if (stderr) {
-    console.error(`stderr: ${stderr}`);
-    return;
-  }
 
 	
     res.sendFile(path.join(__dirname, '/index.html'));
     
     //while(True){
-   // res.send(myText + `\n${stdout}`);}
+   // }
     
 });
 app.post('/', (req, res) => {
     // Insert Login Code Here
     var myText = req.body.code;
     //console.log(myText)
-    res.send(myText);
+    exec('pwd', (error, stdout, stderr) => {
+        if (error) {
+          console.error(`error: ${error.message}`);
+          return;
+        }
+      
+        if (stderr) {
+          console.error(`stderr: ${stderr}`);
+          return;
+        }
+        res.send(myText + `\n${stdout}`);
   });
 })
 
