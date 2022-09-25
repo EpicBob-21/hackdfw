@@ -3,8 +3,8 @@ const app = express()
 const port = 3001
 const { exec } = require('child_process');
 const path = require('path');
-
-
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
 
 
 
@@ -20,9 +20,19 @@ exec('pwd', (error, stdout, stderr) => {
     return;
   }
 
-	//res.send(`\n${stdout}`);
-    res.sendFile(path.join(__dirname, '/index.html'));});
-
+	
+    res.sendFile(path.join(__dirname, '/index.html'));
+    
+    //while(True){
+   // res.send(myText + `\n${stdout}`);}
+    
+});
+app.post('/', (req, res) => {
+    // Insert Login Code Here
+    var myText = req.body.code;
+    //console.log(myText)
+    res.send(myText);
+  });
 })
 
 app.listen(port, () => {
