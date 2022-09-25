@@ -1,0 +1,22 @@
+{
+  "name": "hackdfw3",
+  "version": "1.0.0",
+  "description": "HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EpicBob-21/hackdfw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EpicBob-21/hackdfw/issues"
+  },
+  "homepage": "https://github.com/EpicBob-21/hackdfw#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
