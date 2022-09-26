@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3001
+const port = 80
 const { exec } = require('child_process');
 const path = require('path');
 const bodyParser = require('body-parser');
